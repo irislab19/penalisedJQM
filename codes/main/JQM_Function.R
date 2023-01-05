@@ -386,17 +386,17 @@ jqm<-function(db, alpha=0.05,lambda.u.seq=seq(0.5,4,0.5),
   res<-jqm.est.fixed(db=db,alpha=alpha,lambda.u=optimum$lambda.u,lambda.z=optimum$lambda.z)
   gc(verbose = FALSE)
   
-  plot(cv.results$lambda.u,cv.results$coverage)
-  plot(cv.results$lambda.z,cv.results$coverage)
-  interaction.plot(response=cv.results$coverage,
-                   x.factor=cv.results$lambda.z,trace.factor = cv.results$lambda.u)
-  abline(h=1-alpha,col=2,lty=2)
-  interaction.plot(response=cv.results$cov.time,
-                   x.factor=cv.results$lambda.z,trace.factor = cv.results$lambda.u)
-  abline(h=1-alpha,col=2,lty=2)
-  interaction.plot(response=cv.results$cov.subj,
-                   x.factor=cv.results$lambda.z,trace.factor = cv.results$lambda.u)
-  abline(h=1-alpha,col=2,lty=2)
+  # plot(cv.results$lambda.u,cv.results$coverage)
+  # plot(cv.results$lambda.z,cv.results$coverage)
+  # interaction.plot(response=cv.results$coverage,
+  #                  x.factor=cv.results$lambda.z,trace.factor = cv.results$lambda.u)
+  # abline(h=1-alpha,col=2,lty=2)
+  # interaction.plot(response=cv.results$cov.time,
+  #                  x.factor=cv.results$lambda.z,trace.factor = cv.results$lambda.u)
+  # abline(h=1-alpha,col=2,lty=2)
+  # interaction.plot(response=cv.results$cov.subj,
+  #                  x.factor=cv.results$lambda.z,trace.factor = cv.results$lambda.u)
+  # abline(h=1-alpha,col=2,lty=2)
   
   
   return(list(beta0=res$beta0,
